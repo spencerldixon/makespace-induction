@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
+  resources :induction_sessions
   devise_for :users
+  resources :users
   root 'static_pages#index'
 
   get 'dashboard/index', as: 'dashboard'

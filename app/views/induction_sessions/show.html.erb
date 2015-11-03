@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @induction_session.user %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @induction_session.date %>
+</p>
+
+<%= link_to 'Edit', edit_induction_session_path(@induction_session) %> |
+<%= link_to 'Back', induction_sessions_path %>

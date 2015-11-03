@@ -1,0 +1,25 @@
+<%= form_for(@induction_session) do |f| %>
+  <% if @induction_session.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@induction_session.errors.count, "error") %> prohibited this induction_session from being saved:</h2>
+
+      <ul>
+      <% @induction_session.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :user %><br>
+    <%= f.text_field :user %>
+  </div>
+  <div class="field">
+    <%= f.label :date %><br>
+    <%= f.datetime_select :date %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
